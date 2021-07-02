@@ -1,6 +1,9 @@
 import axios from 'axios'
 import { ElMessage, ElMessageBox } from 'element-plus'
 // import store from '@/store'
+// import moduleForRequire from 'module'
+// import url from 'url'
+// const require = moduleForRequire.createRequire(url.fromURL(import.meta.env))
 
 // 创建axios实例
 const service = axios.create({
@@ -19,6 +22,7 @@ service.interceptors.request.use(
     // // 自定义令牌的字段名为X-Token，根据咱们后台再做修改
     // config.headers["X-Token"] = store.getters.token;
     // }
+    // eslint-disable-next-line no-param-reassign
     config.headers['X-Token'] = 'my token'
     return config
   },
@@ -73,13 +77,12 @@ service.interceptors.response.use(
         })
       }
       return Promise.reject(new Error(res.message || 'Error'))
-    } else {
-      return res
     }
+    return res
   },
   error => {
-    console.log('err' + error) // for debug
-    Message({
+    console.log(`err${error}`) // for debug
+    ElMessage({
       message: error.message,
       type: 'error',
       duration: 5 * 1000,

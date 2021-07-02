@@ -3,11 +3,15 @@
   "scripts": {
     "start": "cross-env NODE_ENV=dev vite --host",
     "dev": "cross-env NODE_ENV=dev vite --host",
-    "test": "cross-env NODE_ENV=test vite --host",
+    "dev:mock": "cross-env NODE_ENV=test vite --host",
     "build": "vite build",
+    "test": "node --trace-warnings node_modules/.bin/jest",
     "serve": "vite preview --host",
     "eslint": "eslint --fix",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": "eslint --fix"
   },
   "dependencies": {
     "@vueuse/core": "^5.0.3",
@@ -21,9 +25,14 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
     "@intlify/vite-plugin-vue-i18n": "^2.2.1",
+    "@types/jest": "^26.0.23",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.5",
+    "@vue/test-utils": "^2.0.0-rc.9",
+    "babel-jest": "^25.2.6",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "element-theme-chalk": "^2.15.3",
@@ -31,11 +40,17 @@
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.12.1",
+    "husky": "^7.0.0",
+    "jest": "^25.2.7",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
     "sass": "^1.35.1",
+    "ts-jest": "^25.3.1",
     "vite": "^2.3.8",
     "vite-plugin-mock": "^2.8.0",
-    "husky": "^7.0.0"
+    "vue-jest": "^5.0.0-alpha.0"
   }
 }
