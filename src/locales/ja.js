@@ -1,0 +1,4 @@
+export default {
+  language: '言語',
+  hello: 'こんにちは、世界！',
+}

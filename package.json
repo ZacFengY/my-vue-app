@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev vite --host",
+    "dev": "cross-env NODE_ENV=dev vite --host",
+    "test": "cross-env NODE_ENV=test vite --host",
+    "build": "vite build",
+    "serve": "vite preview --host",
+    "eslint": "eslint --fix",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@vueuse/core": "^5.0.3",
+    "axios": "^0.21.1",
+    "element-plus": "^1.0.2-beta.53",
+    "mockjs": "^1.1.0",
+    "pinia": "^2.0.0-beta.3",
+    "vue": "^3.0.5",
+    "vue-i18n": "^9.1.6",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@intlify/vite-plugin-vue-i18n": "^2.2.1",
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "element-theme-chalk": "^2.15.3",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "sass": "^1.35.1",
+    "vite": "^2.3.8",
+    "vite-plugin-mock": "^2.8.0",
+    "husky": "^7.0.0"
+  }
+}

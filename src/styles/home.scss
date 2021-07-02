@@ -1,0 +1,22 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  .card-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    flex: 1;
+    .card {
+      flex: 1;
+    }
+    .w20 {
+      width: 20px;
+    }
+  }
+  .h20 {
+    height: 20px;
+  }
+}
